@@ -1,3 +1,8 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
 from core.llm import LLM
 from core.memory import ConversationMemory
 from core.state import ConversationState
@@ -6,7 +11,6 @@ from core.retriever import retrieve_context
 from core.user_manager import UserManager
 from core.summarizer import summarize_conversation
 from core.face_recognition import FaceRecognizer
-import os
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
